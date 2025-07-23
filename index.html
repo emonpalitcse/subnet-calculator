@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multi-Subnet Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📡 Subnet Calculator</h1>
+
+    <!-- Theme toggle button -->
+    <button id="themeToggle" style="margin-bottom:15px;">Switch to Dark Mode</button>
+
+    <form id="subnetForm">
+      <label>Base Network (CIDR):
+        <input type="text" id="baseCIDR" value="192.168.0.0/20" required />
+      </label>
+      <label>Host counts per subnet (comma-separated):
+        <input type="text" id="hostList" placeholder="e.g. 80,50,30" required />
+      </label>
+      <label>Allocation Mode:
+        <select id="allocationMode">
+          <option value="vlsm">VLSM (Variable Length)</option>
+          <option value="fixed">Fixed Length</option>
+        </select>
+      </label>
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="output"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
